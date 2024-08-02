@@ -8,11 +8,13 @@ import { LoginAccountController } from './controllers/accounts/login-account-con
 import { ListUploadController } from './controllers/uploads/list-upload-controller';
 import { DeleteUploadController } from './controllers/uploads/delete-upload-controller';
 import { DownloadUploadController } from './controllers/uploads/download-upload-controller';
-import { DownloadUploadService } from './dtos/uploads/download-upload-dtos';
+import { DownloadUploadService } from './services/download-upload-service';
+import { ConfirmAccountService } from './services/confirm-account-service';
+import { ConfirmAccountController } from './controllers/accounts/confirm-account-controller';
 
 @Module({
-  controllers: [CreateAccountController, DeleteAccountController, LoginAccountController, CreateUploadController, ListUploadController, DeleteUploadController, DownloadUploadController],
-  providers: [PrismaService, DownloadUploadService]
+  controllers: [CreateAccountController, DeleteAccountController, LoginAccountController, ConfirmAccountController, CreateUploadController, ListUploadController, DeleteUploadController, DownloadUploadController],
+  providers: [PrismaService, DownloadUploadService, ConfirmAccountService]
 })
 
 export class AppModule {}
