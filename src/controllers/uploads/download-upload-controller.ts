@@ -1,9 +1,11 @@
 import { Controller, Get, Request, Response } from "@nestjs/common";
 import { verify } from "jsonwebtoken";
+import fs from "fs";
 
 import { PrismaService } from "src/prisma/prisma.service";
 import { Request as ExpressRequest, Response as ExpressResponse } from 'express';
-import { DownloadUploadService } from "src/services/download-upload-service";
+import path from "path";
+import { DownloadUploadService } from "src/dtos/uploads/download-upload-dtos";
 
 
 @Controller("/uploads")

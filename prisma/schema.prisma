@@ -20,10 +20,9 @@ model Users {
   avatar String @default("https://i.pinimg.com/564x/20/05/e2/2005e27a39fa5f6d97b2e0a95233b2be.jpg")
   lang   String @default("en")
 
-  createdAt  DateTime    @default(now())
-  uploads    Upload[]
-  logs       Logs[]
-  validators Validators?
+  createdAt DateTime @default(now())
+  uploads   Upload[]
+  logs      Logs[]
 
   @@map("users")
 }
@@ -55,16 +54,4 @@ model Logs {
 
   userId String? @unique
   user   Users?  @relation(fields: [userId], references: [id])
-
-  @@map("logs")
-}
-
-model Validators {
-  id String @id @default(uuid())
-
-  userEmail String?  @unique
-  emailCode String
-  emailExp  DateTime @default(now())
-
-  user Users? @relation(fields: [userEmail], references: [email])
 }
