@@ -5,7 +5,7 @@
 
 # Suporte
 
-- Caso preciso de qualquer suporte relacionado ao projeto, me envie pedido no discord `@pgwl`.
+- Caso preciso de qualquer suporte relacionado ao projeto, me envie pedido no discord `@pgwllz`.
 
 # Observações
 
